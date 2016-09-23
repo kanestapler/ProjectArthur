@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class MazeGenerator : MonoBehaviour
+public class mazeGenerator : MonoBehaviour
 {
     public GameObject wall;
     public float xSize = 5.0f;
