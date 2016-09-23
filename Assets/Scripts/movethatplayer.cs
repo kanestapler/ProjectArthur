@@ -20,8 +20,8 @@ public class movethatplayer : MonoBehaviour {
 	void Update () {
         hMove = Input.GetAxis("Horizontal");
         vMove = Input.GetAxis("Vertical");
-        angH = Input.GetAxis("RightH") * 60;
-        angV = Input.GetAxis("RightV") * 45;
+        angH = Input.GetAxis("RightH");
+        angV = Input.GetAxis("RightV");
         if (Input.GetButtonDown("Jump")) {
             GrabCrown();
         } else if (vMove > 0) { //Moving forward
@@ -30,6 +30,9 @@ public class movethatplayer : MonoBehaviour {
             ani.SetBool("isJogging", false);
         }
         Move();
+        if (Input.GetButton("Fire1")) {
+            ani.SetTrigger("attack");
+        }
     }
 
     private void GrabCrown() {
@@ -38,6 +41,9 @@ public class movethatplayer : MonoBehaviour {
 
     private void Move() {
         transform.Translate(hMove * speed * Time.deltaTime, 0.0f,vMove * speed * Time.deltaTime);
-        transform.Rotate(angV * turnSpeed * Time.deltaTime, angH * turnSpeed * Time.deltaTime, 0);
+        print(angV + " " + angH);
+        if (angV > 0.5 || angH > 0.5 || angV < -0.5 || angH < -0.5) {
+            transform.Rotate(0, angH * turnSpeed * Time.deltaTime, 0);
+        }
     }
 }
