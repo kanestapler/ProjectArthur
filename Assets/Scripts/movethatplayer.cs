@@ -5,6 +5,7 @@ public class movethatplayer : MonoBehaviour {
 
     public float speed;
     public float turnSpeed;
+    public float axisThreshold;
 
     private static Animator ani;
     private float hMove;
@@ -41,8 +42,7 @@ public class movethatplayer : MonoBehaviour {
 
     private void Move() {
         transform.Translate(hMove * speed * Time.deltaTime, 0.0f,vMove * speed * Time.deltaTime);
-        print(angV + " " + angH);
-        if (angV > 0.5 || angH > 0.5 || angV < -0.5 || angH < -0.5) {
+        if (Mathf.Abs(angV) > axisThreshold || Mathf.Abs(angH) > axisThreshold) {
             transform.Rotate(0, angH * turnSpeed * Time.deltaTime, 0);
         }
     }
