@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class movethatplayer : MonoBehaviour {
+public class PlayerController : MonoBehaviour {
 
     private readonly string JOGGING = "isJogging";
     private readonly string JUMPING = "isJumping";
@@ -32,6 +32,7 @@ public class movethatplayer : MonoBehaviour {
         angV = Input.GetAxis("RightV");
 
         Move();
+        Turn();
 
         if (Input.GetButtonDown("Fire1")) {
             Fire();
@@ -58,6 +59,9 @@ public class movethatplayer : MonoBehaviour {
         } else {
             ani.SetBool(JOGGING, false);
         }
+    }
+
+    private void Turn() {
         if (Mathf.Abs(angV) > axisThreshold || Mathf.Abs(angH) > axisThreshold) {
             transform.Rotate(0, angH * turnSpeed * Time.deltaTime, 0);
         }
