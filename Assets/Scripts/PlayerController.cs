@@ -51,6 +51,11 @@ public class PlayerController : MonoBehaviour {
     }
 
     private void Move() {
+        /*TODO Fix bugs:
+        1. Player only moves left/right when up/down is pressed
+        2. Add animation so player doesn't float left and right
+        Note from Kane: I know why these aren't working right now, but I just can't decide my favorite solution.
+         */
         if (vMove > 0) { //Moving forward
             ani.SetBool(JOGGING, true);
             transform.Translate(hMove * speed * Time.deltaTime, 0.0f, vMove * speed * Time.deltaTime);
