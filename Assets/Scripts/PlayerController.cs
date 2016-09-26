@@ -48,6 +48,12 @@ public class PlayerController : MonoBehaviour {
     }
 
     private void GrabCrown() {
+        /*TODO
+         * Add in small jump animation
+         * This will play when player isn't next to the crown
+         * This will prevent the long animation from being played on accident and the player feeling like they are stuck
+         * Also would help the player know if they are in the correct position to get the crown
+         */
         ani.SetBool(JOGGING, false);
         ani.SetTrigger(JUMPING);
     }
@@ -86,6 +92,8 @@ public class PlayerController : MonoBehaviour {
             ani.SetTrigger(ATTACK);
         }
     }
+
+
 
 
     private bool ReadyToFire() {
