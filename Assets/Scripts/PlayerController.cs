@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour {
     public float axisThreshold;
     public int fireWaitTime;
 
+    public int playerNumber;
+
     private static Animator ani;
     private float hMove;
     private float vMove;
@@ -28,10 +30,11 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        hMove = Input.GetAxis("Horizontal");
-        vMove = Input.GetAxis("Vertical");
-        angH = Input.GetAxis("RightH");
-        angV = Input.GetAxis("RightV");
+        hMove = Input.GetAxis("Horizontal" + playerNumber);
+        vMove = Input.GetAxis("Vertical" + playerNumber);
+        angH = Input.GetAxis("RightH" + playerNumber);
+        angV = Input.GetAxis("RightV" + playerNumber);
+        
 
         Move();
         Turn();
