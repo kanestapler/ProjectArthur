@@ -7,12 +7,16 @@ public class PlayerController : MonoBehaviour {
     private readonly string JUMPING = "isJumping";
     private readonly string ATTACK = "attack";
     private readonly string BACKWARDS = "isWalkingBackwards";
-    private readonly string STRAFING = "isStrafing";
+    private readonly string STRAFINGRIGHT = "isStrafingRight";
+    private readonly string STRAFINGLEFT = "isStrafingLeft";
 
-    public float speed;
+    public float forwardSpeed;
+    public float backwardsSpeed;
+    public float strafeSpeed;
     public float turnSpeed;
     public float axisThreshold;
     public int fireWaitTime;
+    public float strafeThreshold;
 
     public int playerNumber;
 
@@ -63,24 +67,29 @@ public class PlayerController : MonoBehaviour {
 
     private void Move() {
         /*TODO Fix bugs:
-        1. Player only moves left/right when up/down is pressed (Fixed)
-        2. Add animation so player doesn't float left and right
-        Note from Kane: I know why these aren't working right now, but I just can't decide my favorite solution.
+        1. Make isIdle a bool. This should stop the weird transitions
          */
-        
-        if (vMove > 0) { //Moving forward
+        float speed = 0.0f;
+
+        if (vMove > strafeThreshold) { //Moving forward
             ani.SetBool(JOGGING, true);
-        } else if (vMove < 0) { //Moving backwards
-            //Waiting on backwards walking animation
-            //ani.SetBool(BACKWARDS, true);
-        } else if (Mathf.Abs(hMove) > 0) {
+            speed = forwardSpeed;
+        } else if (vMove < -strafeThreshold) { //Moving backwards
+            ani.SetBool(BACKWARDS, true);
+            speed = backwardsSpeed;
+        } else if (hMove > 0) {
             ani.SetBool(JOGGING, false);
-            //ani.SetBool(STRAFING, true);
+            ani.SetBool(STRAFINGRIGHT, true);
+        } else if (hMove < 0) {
+            ani.SetBool(JOGGING, false);
+            ani.SetBool(STRAFINGLEFT, true);
         } else {
             ani.SetBool(JOGGING, false);
-            //ani.SetBool(STRAFING, false);
+            ani.SetBool(STRAFINGLEFT, false);
+            ani.SetBool(STRAFINGRIGHT, false);
+            ani.SetBool(BACKWARDS, false);
         }
-        transform.Translate(hMove * speed * Time.deltaTime, 0.0f, vMove * speed * Time.deltaTime);
+        transform.Translate(hMove * strafeSpeed * Time.deltaTime, 0.0f, vMove * speed * Time.deltaTime);
     }
 
     private void Turn() {
