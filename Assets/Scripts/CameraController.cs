@@ -16,9 +16,11 @@ public class CameraController : MonoBehaviour {
     private float distanceToWall = 1.0f;
     private float heightWhileBumping = 2.0f;
 
+    public float initialRotation = 1.4f;
+
 
     void Awake () {
-        cameraRotation = new Vector3(0, 1.4f, 0);
+        cameraRotation = new Vector3(0, initialRotation, 0);
         GetComponent<Camera>().transform.parent = player;
     }
 	
