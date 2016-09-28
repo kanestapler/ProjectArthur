@@ -80,9 +80,15 @@ public class PlayerController : MonoBehaviour {
         } else if (hMove > 0) {
             ani.SetBool(JOGGING, false);
             ani.SetBool(STRAFINGRIGHT, true);
+            if (playerNumber == 1) {
+                print("Player 1 Strafe Right");
+            }
         } else if (hMove < 0) {
             ani.SetBool(JOGGING, false);
             ani.SetBool(STRAFINGLEFT, true);
+            if (playerNumber == 1) {
+                print("Player 1 Strafe Left");
+            }
         } else {
             ani.SetBool(JOGGING, false);
             ani.SetBool(STRAFINGLEFT, false);
