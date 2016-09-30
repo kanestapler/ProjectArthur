@@ -823,7 +823,6 @@ GameObject:
   - 20: {fileID: 20000012542005866}
   - 92: {fileID: 92000010533064932}
   - 124: {fileID: 124000011976935288}
-  - 81: {fileID: 81000014097568708}
   - 114: {fileID: 114000013464078958}
   - 135: {fileID: 135000012306711884}
   m_Layer: 0
@@ -2310,13 +2309,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!81 &81000014097568708
-AudioListener:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013019065198}
-  m_Enabled: 1
 --- !u!92 &92000010533064932
 Behaviour:
   m_ObjectHideFlags: 1

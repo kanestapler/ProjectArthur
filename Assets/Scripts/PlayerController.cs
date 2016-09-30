@@ -73,16 +73,26 @@ public class PlayerController : MonoBehaviour {
 
         if (vMove > strafeThreshold) { //Moving forward
             ani.SetBool(JOGGING, true);
+            ani.SetBool(BACKWARDS, false);
+            ani.SetBool(STRAFINGRIGHT, false);
+            ani.SetBool(STRAFINGLEFT, false);
             speed = forwardSpeed;
         } else if (vMove < -strafeThreshold) { //Moving backwards
             ani.SetBool(BACKWARDS, true);
+            ani.SetBool(JOGGING, false);
+            ani.SetBool(STRAFINGRIGHT, false);
+            ani.SetBool(STRAFINGLEFT, false);
             speed = backwardsSpeed;
         } else if (hMove > 0) {
             ani.SetBool(JOGGING, false);
             ani.SetBool(STRAFINGRIGHT, true);
+            ani.SetBool(STRAFINGLEFT, false);
+            ani.SetBool(BACKWARDS, false);
         } else if (hMove < 0) {
             ani.SetBool(JOGGING, false);
             ani.SetBool(STRAFINGLEFT, true);
+            ani.SetBool(STRAFINGRIGHT, false);
+            ani.SetBool(BACKWARDS, false);
         } else {
             ani.SetBool(JOGGING, false);
             ani.SetBool(STRAFINGLEFT, false);
