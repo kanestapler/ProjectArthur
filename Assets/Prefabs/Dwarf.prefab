@@ -2304,7 +2304,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.1
+  m_AngularDrag: 5
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -2326,7 +2326,7 @@ Animator:
   m_GameObject: {fileID: 1000013797394736}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 94f328d6c4b87cc42b0706096f2b4df0, type: 3}
-  m_Controller: {fileID: 9100000, guid: 4e25eb3042da1604491fd77a699fd8bd, type: 2}
+  m_Controller: {fileID: 9100000, guid: bbfb1333550cad948bd3b5093e56e4e8, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
