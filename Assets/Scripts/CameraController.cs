@@ -8,6 +8,7 @@ public class CameraController : MonoBehaviour {
 
     public float distance = 1.75f;
     public float height = 1.5f;
+    public float forwardDistance = 0.5f;
     private float smoothness = 5.0f;
     private float rotationSmoothing = 10.0f;
 
@@ -37,7 +38,7 @@ public class CameraController : MonoBehaviour {
             wantedPosition.y = Mathf.Lerp(rcHit.point.y + heightWhileBumping, wantedPosition.y, Time.deltaTime * smoothness);
         }
 
-        transform.position = Vector3.Lerp(transform.position, wantedPosition, Time.deltaTime * smoothness);
+        transform.position = Vector3.Lerp(transform.position, wantedPosition + transform.forward * forwardDistance, Time.deltaTime * smoothness);
 
         Vector3 lookPosition = player.TransformPoint(cameraRotation);
 

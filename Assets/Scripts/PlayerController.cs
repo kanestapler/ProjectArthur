@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour {
 
     public int playerNumber;
 
-    private static Animator ani;
+    private Animator ani;
     private float hMove;
     private float vMove;
     private float angH;
@@ -43,13 +43,13 @@ public class PlayerController : MonoBehaviour {
         Move();
         Turn();
 
-        if (Input.GetButtonDown("Fire1")) {
+        if (Input.GetButtonDown("Fire" + playerNumber)) {
             Fire();
         }
         if (!ReadyToFire()) {
             fireTime++;
         }
-        if (Input.GetButtonDown("Jump")) {
+        if (Input.GetButtonDown("Jump" + playerNumber)) {
             GrabCrown();
         }
     }
@@ -80,15 +80,9 @@ public class PlayerController : MonoBehaviour {
         } else if (hMove > 0) {
             ani.SetBool(JOGGING, false);
             ani.SetBool(STRAFINGRIGHT, true);
-            if (playerNumber == 1) {
-                print("Player 1 Strafe Right");
-            }
         } else if (hMove < 0) {
             ani.SetBool(JOGGING, false);
             ani.SetBool(STRAFINGLEFT, true);
-            if (playerNumber == 1) {
-                print("Player 1 Strafe Left");
-            }
         } else {
             ani.SetBool(JOGGING, false);
             ani.SetBool(STRAFINGLEFT, false);

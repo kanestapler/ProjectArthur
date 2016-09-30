@@ -1522,7 +1522,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000014248433758}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.22, y: 0, z: 1.31}
+  m_LocalPosition: {x: -6.35, y: 0, z: 1.31}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -2359,7 +2359,7 @@ MonoBehaviour:
   axisThreshold: 0.3
   fireWaitTime: 60
   strafeThreshold: 0.2
-  playerNumber: 2
+  playerNumber: 1
 --- !u!114 &114000013464078958
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2374,6 +2374,7 @@ MonoBehaviour:
   player: {fileID: 4000011464649306}
   distance: 2
   height: 2
+  forwardDistance: 0.55
   initialRotation: 1.4
 --- !u!124 &124000011976935288
 Behaviour:

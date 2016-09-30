@@ -25,7 +25,8 @@ public class mazeGenerator : MonoBehaviour
     public float wallLength = 1.0f;
     public int xSize = 5;
     public int ySize = 5;
-    public int numberOfTorches = 30;
+    public int numberOfTorchesX = 30;
+    public int numberOfTorchesY = 30;
 
     private int currentCell = 0;
     private int totalCells;
@@ -60,7 +61,7 @@ public class mazeGenerator : MonoBehaviour
                 myPos = new Vector3(initialPos.x + (j * wallLength) - wallLength / 2, startingPos, initialPos.z + (i * wallLength) - wallLength / 2);
                 tempWall = Instantiate(wall, myPos, Quaternion.identity) as GameObject;
                 tempWall.transform.parent = wallHolder.transform;
-                if (j % numberOfTorches == 0) {
+                if (j % Random.Range(numberOfTorchesX, numberOfTorchesY) == 0) {
                     GameObject newTorche = Instantiate(torche, tempWall.transform.position, tempWall.transform.rotation) as GameObject;
                     newTorche.transform.localScale = new Vector3(1, 1, 1);
                     newTorche.transform.rotation = new Quaternion(0, 0, 20, 0);
@@ -77,6 +78,12 @@ public class mazeGenerator : MonoBehaviour
                 myPos = new Vector3(initialPos.x + (j * wallLength), startingPos, initialPos.z + (i * wallLength) - wallLength);
                 tempWall = Instantiate(wall, myPos, Quaternion.Euler(0.0f, 90.0f, 0.0f)) as GameObject;
                 tempWall.transform.parent = wallHolder.transform;
+                if (j % Random.Range(numberOfTorchesX, numberOfTorchesY) == 0) {
+                    GameObject newTorche = Instantiate(torche, tempWall.transform.position, tempWall.transform.rotation) as GameObject;
+                    newTorche.transform.localScale = new Vector3(1, 1, 1);
+                    newTorche.transform.rotation = new Quaternion(0, 0, 20, 0);
+                    newTorche.transform.parent = tempWall.transform;
+                }
             }
         }
 
