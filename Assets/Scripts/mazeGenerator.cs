@@ -28,6 +28,8 @@ public class mazeGenerator : MonoBehaviour
     public int numberOfTorchesX = 30;
     public int numberOfTorchesY = 30;
 
+    public float forwardDistance = 1.0f;
+
     private int currentCell = 0;
     private int totalCells;
     private int backingUp = 0;
@@ -63,9 +65,10 @@ public class mazeGenerator : MonoBehaviour
                 tempWall.transform.parent = wallHolder.transform;
                 if (j % Random.Range(numberOfTorchesX, numberOfTorchesY) == 0) {
                     GameObject newTorche = Instantiate(torche, tempWall.transform.position, tempWall.transform.rotation) as GameObject;
-                    newTorche.transform.localScale = new Vector3(1, 1, 1);
-                    newTorche.transform.rotation = new Quaternion(0, 0, 20, 0);
-                    newTorche.transform.parent = tempWall.transform;
+                    newTorche.transform.position = tempWall.transform.position;
+                    //newTorche.transform = new Vector3(1, 0.3f, 0.3f);
+                    newTorche.transform.rotation = Quaternion.Euler(40.0f, 90.0f, 0.0f);
+                    newTorche.transform.Translate(newTorche.transform.right * forwardDistance, newTorche.transform);
                 }
             }
         }
@@ -80,9 +83,10 @@ public class mazeGenerator : MonoBehaviour
                 tempWall.transform.parent = wallHolder.transform;
                 if (j % Random.Range(numberOfTorchesX, numberOfTorchesY) == 0) {
                     GameObject newTorche = Instantiate(torche, tempWall.transform.position, tempWall.transform.rotation) as GameObject;
-                    newTorche.transform.localScale = new Vector3(1, 1, 1);
-                    newTorche.transform.rotation = new Quaternion(0, 0, 20, 0);
-                    newTorche.transform.parent = tempWall.transform;
+                    newTorche.transform.position = tempWall.transform.position;
+                    //newTorche.transform = new Vector3(1, 0.3f, 0.3f);
+                    newTorche.transform.rotation = Quaternion.Euler(40.0f, 90.0f, 0.0f);
+                    //newTorche.transform.Translate(newTorche.transform.right * forwardDistance, newTorche.transform);
                 }
             }
         }
