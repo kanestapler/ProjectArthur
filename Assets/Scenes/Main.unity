@@ -695,8 +695,7 @@ MonoBehaviour:
   wallLength: 2.5
   xSize: 17
   ySize: 17
-  numberOfTorchesX: 5
-  numberOfTorchesY: 30
+  randomChanceForTorche: 13
   forwardDistance: 0.4
   startingPos: -5
 --- !u!4 &1100348646

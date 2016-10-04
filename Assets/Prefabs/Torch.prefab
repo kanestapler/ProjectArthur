@@ -9,7 +9,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 400000}
   - 114: {fileID: 11400000}
-  - 114: {fileID: 114000010363116254}
   m_Layer: 0
   m_Name: Torch
   m_TagString: Untagged
@@ -7426,17 +7425,3 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100000}
   m_IsPrefabParent: 1
---- !u!114 &114000010363116254
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bc928a5d45952f49b4dd545db02ff35, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  max: 1.5
-  speed: 1
-  direction: {x: 0, y: 1, z: 0}

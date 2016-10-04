@@ -20,13 +20,17 @@ public class mazeGenerator : MonoBehaviour
     private int currentNeighbor = 0;
     private List<int> lastCells;
 
+    private float minTorcheDistance = 0.15f;
+    private float maxTorcheDistance = 0.23f;
+    private float minTorcheRotation = 16.0f;
+    private float maxTorcheRotation = 35.0f;
+
     public GameObject wall;
     public GameObject torche;
     public float wallLength = 1.0f;
     public int xSize = 5;
     public int ySize = 5;
-    public int numberOfTorchesX = 30;
-    public int numberOfTorchesY = 30;
+    public int randomChanceForTorche = 30;
 
     public float forwardDistance = 1.0f;
 
@@ -63,12 +67,14 @@ public class mazeGenerator : MonoBehaviour
                 myPos = new Vector3(initialPos.x + (j * wallLength) - wallLength / 2, startingPos, initialPos.z + (i * wallLength) - wallLength / 2);
                 tempWall = Instantiate(wall, myPos, Quaternion.identity) as GameObject;
                 tempWall.transform.parent = wallHolder.transform;
-                if (j % Random.Range(numberOfTorchesX, numberOfTorchesY) == 0) {
+                if (Random.Range(0, randomChanceForTorche) == 0) {
                     GameObject newTorche = Instantiate(torche, tempWall.transform.position, tempWall.transform.rotation) as GameObject;
-                    newTorche.transform.position = tempWall.transform.position;
-                    //newTorche.transform = new Vector3(1, 0.3f, 0.3f);
-                    newTorche.transform.rotation = Quaternion.Euler(40.0f, 90.0f, 0.0f);
-                    newTorche.transform.Translate(newTorche.transform.right * forwardDistance, newTorche.transform);
+                    float randomDistanceOutFromWall = Random.Range(minTorcheDistance, maxTorcheDistance);
+                    float randomRotationForTorche = Random.Range(16.0f, 35.0f);
+                    newTorche.transform.parent = tempWall.transform;
+                    newTorche.transform.Translate(randomDistanceOutFromWall, 0.0f,0.0f);
+                    GameObject newTorcheModel = newTorche.transform.Find("torche").gameObject;
+                    newTorcheModel.transform.Rotate(0.0f, 0.0f, -randomRotationForTorche);
                 }
             }
         }
@@ -81,13 +87,13 @@ public class mazeGenerator : MonoBehaviour
                 myPos = new Vector3(initialPos.x + (j * wallLength), startingPos, initialPos.z + (i * wallLength) - wallLength);
                 tempWall = Instantiate(wall, myPos, Quaternion.Euler(0.0f, 90.0f, 0.0f)) as GameObject;
                 tempWall.transform.parent = wallHolder.transform;
-                if (j % Random.Range(numberOfTorchesX, numberOfTorchesY) == 0) {
-                    GameObject newTorche = Instantiate(torche, tempWall.transform.position, tempWall.transform.rotation) as GameObject;
-                    newTorche.transform.position = tempWall.transform.position;
-                    //newTorche.transform = new Vector3(1, 0.3f, 0.3f);
-                    newTorche.transform.rotation = Quaternion.Euler(40.0f, 90.0f, 0.0f);
-                    //newTorche.transform.Translate(newTorche.transform.right * forwardDistance, newTorche.transform);
-                }
+                //if (j % Random.Range(numberOfTorchesX, numberOfTorchesY) == 0) {
+                //    GameObject newTorche = Instantiate(torche, tempWall.transform.position, tempWall.transform.rotation) as GameObject;
+                //    newTorche.transform.position = tempWall.transform.position;
+                //    //newTorche.transform = new Vector3(1, 0.3f, 0.3f);
+                //    newTorche.transform.rotation = Quaternion.Euler(40.0f, 90.0f, 0.0f);
+                //    //newTorche.transform.Translate(newTorche.transform.right * forwardDistance, newTorche.transform);
+                //}
             }
         }
 
