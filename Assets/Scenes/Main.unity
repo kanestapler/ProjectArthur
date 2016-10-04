@@ -89,7 +89,7 @@ NavMeshSettings:
     minRegionArea: 2
     cellSize: 0.16666667
     manualCellSize: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: abdb798086c04084f9590c025ff6fc60, type: 2}
 --- !u!1001 &193135524
 Prefab:
   m_ObjectHideFlags: 0
@@ -600,7 +600,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!23 &721533214
 MeshRenderer:
@@ -909,8 +909,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  directionChangeInterval: 1
-  maxHeadingChange: 30
+  distanceFromWall: 10
 --- !u!143 &1620680997
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1153,7 +1152,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400152, guid: f9e79c7bee22ca948801bb72df618b93, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -28.33
+      value: 12.25
       objectReference: {fileID: 0}
     - target: {fileID: 400152, guid: f9e79c7bee22ca948801bb72df618b93, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1161,7 +1160,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400152, guid: f9e79c7bee22ca948801bb72df618b93, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -50.8
+      value: -1.82
       objectReference: {fileID: 0}
     - target: {fileID: 400152, guid: f9e79c7bee22ca948801bb72df618b93, type: 3}
       propertyPath: m_LocalRotation.x

@@ -74,6 +74,8 @@ public class mazeGenerator : MonoBehaviour
                     newTorche.transform.parent = tempWall.transform;
                     newTorche.transform.Translate(randomDistanceOutFromWall, 0.0f,0.0f);
                     GameObject newTorcheModel = newTorche.transform.Find("torche").gameObject;
+                    GameObject newTorcheLight = newTorche.transform.Find("Torch_light").gameObject;
+                    newTorcheLight.transform.Translate(randomDistanceOutFromWall, 0.0f, 0.0f);
                     newTorcheModel.transform.Rotate(0.0f, 0.0f, -randomRotationForTorche);
                 }
             }
@@ -94,6 +96,8 @@ public class mazeGenerator : MonoBehaviour
                     newTorche.transform.parent = tempWall.transform;
                     newTorche.transform.Translate(randomDistanceOutFromWall, 0.0f, 0.0f);
                     GameObject newTorcheModel = newTorche.transform.Find("torche").gameObject;
+                    GameObject newTorcheLight = newTorche.transform.Find("Torch_light").gameObject;
+                    newTorcheLight.transform.Translate(randomDistanceOutFromWall, 0.0f, 0.0f);
                     newTorcheModel.transform.Rotate(0.0f, 0.0f, -randomRotationForTorche);
                 }
             }

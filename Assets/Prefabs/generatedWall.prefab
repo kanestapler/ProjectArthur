@@ -23,6 +23,7 @@ GameObject:
   - 65: {fileID: 65000013576268694}
   - 23: {fileID: 23000010760013418}
   - 114: {fileID: 114000012411816494}
+  - 208: {fileID: 208000013078499048}
   m_Layer: 0
   m_Name: generatedWall
   m_TagString: Untagged
@@ -105,3 +106,18 @@ MonoBehaviour:
   max: 1.5
   speed: 1
   direction: {x: 0, y: 1, z: 0}
+--- !u!208 &208000013078499048
+NavMeshObstacle:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012188139888}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.3, y: 0.5, z: 0.3}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
