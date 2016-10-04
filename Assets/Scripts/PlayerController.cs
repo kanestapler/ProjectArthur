@@ -27,7 +27,10 @@ public class PlayerController : MonoBehaviour {
     private float angV;
     private int fireTime;
 
+    private GlobalController GC;
+
     void Start () {
+        GC = GameObject.Find("GameController").GetComponent<GlobalController>();
         ani = GetComponent<Animator>();
         fireTime = 0;
     }
@@ -39,18 +42,18 @@ public class PlayerController : MonoBehaviour {
         angH = Input.GetAxis("RightH" + playerNumber);
         angV = Input.GetAxis("RightV" + playerNumber);
         
-
-        Move();
-        Turn();
-
-        if (Input.GetButtonDown("Fire" + playerNumber)) {
-            Fire();
-        }
-        if (!ReadyToFire()) {
-            fireTime++;
-        }
-        if (Input.GetButtonDown("Jump" + playerNumber)) {
-            GrabCrown();
+        if (GC.gameReady) {
+            Move();
+            Turn();
+            if (Input.GetButtonDown("Fire" + playerNumber)) {
+                Fire();
+            }
+            if (!ReadyToFire()) {
+                fireTime++;
+            }
+            if (Input.GetButtonDown("Jump" + playerNumber)) {
+                GrabCrown();
+            }
         }
     }
 

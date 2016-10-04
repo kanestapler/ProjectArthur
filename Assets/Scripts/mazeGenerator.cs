@@ -70,7 +70,7 @@ public class mazeGenerator : MonoBehaviour
                 if (Random.Range(0, randomChanceForTorche) == 0) {
                     GameObject newTorche = Instantiate(torche, tempWall.transform.position, tempWall.transform.rotation) as GameObject;
                     float randomDistanceOutFromWall = Random.Range(minTorcheDistance, maxTorcheDistance);
-                    float randomRotationForTorche = Random.Range(16.0f, 35.0f);
+                    float randomRotationForTorche = Random.Range(minTorcheRotation, maxTorcheRotation);
                     newTorche.transform.parent = tempWall.transform;
                     newTorche.transform.Translate(randomDistanceOutFromWall, 0.0f,0.0f);
                     GameObject newTorcheModel = newTorche.transform.Find("torche").gameObject;
@@ -87,13 +87,15 @@ public class mazeGenerator : MonoBehaviour
                 myPos = new Vector3(initialPos.x + (j * wallLength), startingPos, initialPos.z + (i * wallLength) - wallLength);
                 tempWall = Instantiate(wall, myPos, Quaternion.Euler(0.0f, 90.0f, 0.0f)) as GameObject;
                 tempWall.transform.parent = wallHolder.transform;
-                //if (j % Random.Range(numberOfTorchesX, numberOfTorchesY) == 0) {
-                //    GameObject newTorche = Instantiate(torche, tempWall.transform.position, tempWall.transform.rotation) as GameObject;
-                //    newTorche.transform.position = tempWall.transform.position;
-                //    //newTorche.transform = new Vector3(1, 0.3f, 0.3f);
-                //    newTorche.transform.rotation = Quaternion.Euler(40.0f, 90.0f, 0.0f);
-                //    //newTorche.transform.Translate(newTorche.transform.right * forwardDistance, newTorche.transform);
-                //}
+                if (Random.Range(0, randomChanceForTorche) == 0) {
+                    GameObject newTorche = Instantiate(torche, tempWall.transform.position, tempWall.transform.rotation) as GameObject;
+                    float randomDistanceOutFromWall = Random.Range(minTorcheDistance, maxTorcheDistance);
+                    float randomRotationForTorche = Random.Range(minTorcheRotation, maxTorcheRotation);
+                    newTorche.transform.parent = tempWall.transform;
+                    newTorche.transform.Translate(randomDistanceOutFromWall, 0.0f, 0.0f);
+                    GameObject newTorcheModel = newTorche.transform.Find("torche").gameObject;
+                    newTorcheModel.transform.Rotate(0.0f, 0.0f, -randomRotationForTorche);
+                }
             }
         }
 
