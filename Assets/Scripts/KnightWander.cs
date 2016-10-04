@@ -6,8 +6,11 @@ public class KnightWander : MonoBehaviour {
     public float speed = 1.0f;
     public float distanceFromWall = 10;
 
-    void Start() {
+    private NavMeshAgent NMAgent;
 
+    void Start() {
+        NMAgent = GetComponent<NavMeshAgent>();
+        NMAgent.destination = new Vector3(0.0f,0.0f,0.0f);
     }
 
     void Update() {
