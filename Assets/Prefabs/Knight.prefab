@@ -2288,9 +2288,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   distanceFromWall: 10
-  destination1: {x: 0, y: 0, z: 0}
-  destination2: {x: 0, y: 0, z: 0}
-  distanceThreshhold: 3
+  destination1: {x: -7, y: 0, z: 12}
+  destination2: {x: -7, y: 0, z: 20}
+  distanceThreshholdToTurnAround: 3
+  distanceToStartFollowingPlayer: 7
 --- !u!137 &137000010366149222
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
