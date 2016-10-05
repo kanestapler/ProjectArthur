@@ -48,8 +48,7 @@ public class KnightWander : MonoBehaviour {
         for (int i = 0; i < numberOfPlayers; i++) {
             playerDistances[i] = Vector3.Distance(players[i].transform.position, transform.position);
         }
-        float smallestDistance = playerDistances.Min();
-        print(smallestDistance);
+        float smallestDistance = playerDistances.Min();=
         if (smallestDistance <= distanceToStartFollowingPlayer) {
             int smallestIndex = Array.IndexOf(playerDistances, smallestDistance);
             return players[smallestIndex];
@@ -77,8 +76,7 @@ public class KnightWander : MonoBehaviour {
         RaycastHit RCHit;
         Vector3 direction = transform.TransformDirection(Vector3.forward);
         if (Physics.Raycast(transform.position, direction, out RCHit, distanceFromWall)) {
-            print("I HIT IT");
-            print(RCHit.distance);
+
         }
         return Physics.Raycast(transform.position, direction, out RCHit, distanceFromWall);
     }
