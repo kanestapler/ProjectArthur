@@ -48,7 +48,7 @@ public class KnightWander : MonoBehaviour {
         for (int i = 0; i < numberOfPlayers; i++) {
             playerDistances[i] = Vector3.Distance(players[i].transform.position, transform.position);
         }
-        float smallestDistance = playerDistances.Min();=
+        float smallestDistance = playerDistances.Min();
         if (smallestDistance <= distanceToStartFollowingPlayer) {
             int smallestIndex = Array.IndexOf(playerDistances, smallestDistance);
             return players[smallestIndex];
