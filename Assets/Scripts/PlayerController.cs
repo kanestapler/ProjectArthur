@@ -29,8 +29,11 @@ public class PlayerController : MonoBehaviour {
 
     private GlobalController GC;
 
+    private GameObject crown;
+
     void Start () {
         GC = GameObject.Find("GameController").GetComponent<GlobalController>();
+        crown = GameObject.FindGameObjectWithTag("Crown");
         ani = GetComponent<Animator>();
         fireTime = 0;
     }
@@ -45,6 +48,9 @@ public class PlayerController : MonoBehaviour {
         if (GC.gameReady) {
             Move();
             Turn();
+            if (InRangeOfCrown()) {
+                GiveMeTheCrown();
+            }
             if (Input.GetButtonDown("Fire" + playerNumber)) {
                 Fire();
             }
@@ -52,9 +58,17 @@ public class PlayerController : MonoBehaviour {
                 fireTime++;
             }
             if (Input.GetButtonDown("Jump" + playerNumber)) {
-                GrabCrown();
+                //GrabCrown();
             }
         }
+    }
+
+    private bool InRangeOfCrown() {
+        return true;
+    }
+
+    private void GiveMeTheCrown() {
+        //crown.transform.parent = this.transform;
     }
 
     private void GrabCrown() {

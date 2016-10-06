@@ -24,7 +24,7 @@ GameObject:
   - 65: {fileID: 65000012230070608}
   m_Layer: 0
   m_Name: Cube.003
-  m_TagString: Untagged
+  m_TagString: Throne
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42,7 +42,7 @@ GameObject:
   - 65: {fileID: 65000010718346366}
   m_Layer: 0
   m_Name: Cube.007
-  m_TagString: Untagged
+  m_TagString: Throne
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -60,7 +60,7 @@ GameObject:
   - 65: {fileID: 65000011987378040}
   m_Layer: 0
   m_Name: Cube.001
-  m_TagString: Untagged
+  m_TagString: Throne
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -78,7 +78,7 @@ GameObject:
   - 65: {fileID: 65000011150521578}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Throne
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,9 +94,10 @@ GameObject:
   - 33: {fileID: 33000013524002670}
   - 23: {fileID: 23000013313864582}
   - 65: {fileID: 65000010756268004}
+  - 208: {fileID: 208000011149153812}
   m_Layer: 0
   m_Name: Cube.009
-  m_TagString: Untagged
+  m_TagString: Throne
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,9 +111,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000010432438736}
   - 54: {fileID: 54000010748865654}
+  - 208: {fileID: 208000013412129874}
   m_Layer: 0
   m_Name: Throne
-  m_TagString: Untagged
+  m_TagString: Throne
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -130,7 +132,7 @@ GameObject:
   - 65: {fileID: 65000014171067708}
   m_Layer: 0
   m_Name: Cylinder.001
-  m_TagString: Untagged
+  m_TagString: Throne
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -148,7 +150,7 @@ GameObject:
   - 65: {fileID: 65000013462159278}
   m_Layer: 0
   m_Name: Cube.002
-  m_TagString: Untagged
+  m_TagString: Throne
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -164,7 +166,7 @@ GameObject:
   - 54: {fileID: 54000012422512152}
   m_Layer: 0
   m_Name: Chest
-  m_TagString: Untagged
+  m_TagString: Throne
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -181,7 +183,7 @@ GameObject:
   - 23: {fileID: 23000013802458924}
   m_Layer: 0
   m_Name: Cube.005
-  m_TagString: Untagged
+  m_TagString: Throne
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -199,7 +201,7 @@ GameObject:
   - 65: {fileID: 65000011060904686}
   m_Layer: 0
   m_Name: Cube.008
-  m_TagString: Untagged
+  m_TagString: Throne
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -217,7 +219,7 @@ GameObject:
   - 65: {fileID: 65000010115422676}
   m_Layer: 0
   m_Name: Cube.004
-  m_TagString: Untagged
+  m_TagString: Throne
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -234,7 +236,7 @@ GameObject:
   - 23: {fileID: 23000011401059654}
   m_Layer: 0
   m_Name: Cube.006
-  m_TagString: Untagged
+  m_TagString: Throne
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -252,7 +254,7 @@ GameObject:
   - 65: {fileID: 65000010293859102}
   m_Layer: 0
   m_Name: Cylinder
-  m_TagString: Untagged
+  m_TagString: Throne
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -270,7 +272,7 @@ GameObject:
   - 65: {fileID: 65000010878745610}
   m_Layer: 0
   m_Name: default
-  m_TagString: Untagged
+  m_TagString: Throne
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -287,7 +289,7 @@ GameObject:
   - 23: {fileID: 23000013842461718}
   m_Layer: 0
   m_Name: Circle
-  m_TagString: Untagged
+  m_TagString: Throne
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -312,7 +314,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011756332262}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -61.53, y: 1.63, z: 0}
+  m_LocalPosition: {x: 13.23, y: 1.63, z: 11.91}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -366,7 +368,7 @@ Transform:
   m_GameObject: {fileID: 1000011548678972}
   m_LocalRotation: {x: 0.000000030908623, y: 0.7071068, z: 0.7071067, w: 0.000000030908616}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: -86.55536, y: -100, z: -17.063534}
+  m_LocalScale: {x: 86.55536, y: 100, z: 17.06353}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000010432438736}
@@ -377,11 +379,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013292523586}
-  m_LocalRotation: {x: -0.0000000059624403, y: -0.00000004371139, z: -2.6062656e-16,
-    w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: -0, y: 0.49148253, z: -0.82592946}
-  m_LocalScale: {x: -86.55536, y: -100, z: -17.063534}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 86.55536, y: 100, z: 17.06353}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_Children: []
   m_Father: {fileID: 4000010432438736}
   m_RootOrder: 5
@@ -432,7 +433,7 @@ Transform:
   m_GameObject: {fileID: 1000010384066054}
   m_LocalRotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: -0.9898603, y: -0.39780766, z: 0.08858447}
-  m_LocalScale: {x: -21.529406, y: -111.01435, z: -89.12123}
+  m_LocalScale: {x: 21.52941, y: 111.0144, z: 89.12123}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000010432438736}
@@ -445,7 +446,7 @@ Transform:
   m_GameObject: {fileID: 1000012510547852}
   m_LocalRotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: 1.0411057, y: -0.39780766, z: 0.08858447}
-  m_LocalScale: {x: -21.529406, y: -111.01435, z: -89.12123}
+  m_LocalScale: {x: 21.52941, y: 111.0144, z: 89.12123}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000010432438736}
@@ -456,11 +457,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013372747478}
-  m_LocalRotation: {x: -0.0000000059624403, y: -0.00000004371139, z: -2.6062659e-16,
-    w: 1}
+  m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
   m_LocalPosition: {x: 0.03077704, y: 0.23519519, z: -0.9832307}
-  m_LocalScale: {x: -112.928246, y: -151.53802, z: -21.534697}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 112.9282, y: 151.538, z: 21.5347}
+  m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000010432438736}
   m_RootOrder: 7
@@ -473,7 +473,7 @@ Transform:
   m_LocalRotation: {x: -0.0000000059624403, y: -0.00000004371139, z: -2.6062656e-16,
     w: 1}
   m_LocalPosition: {x: -0, y: 0.49148253, z: -0.82592946}
-  m_LocalScale: {x: -86.55536, y: -100, z: -17.063534}
+  m_LocalScale: {x: 86.55536, y: 100, z: 17.06353}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000010432438736}
@@ -1063,7 +1063,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.02, y: 0.023616154, z: 0.02}
-  m_Center: {x: 1.9143756e-25, y: -0.0018080766, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65000010293859102
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -1184,3 +1184,33 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.02, y: 0.02, z: 0.019999998}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!208 &208000011149153812
+NavMeshObstacle:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011753400582}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.01, y: 0.010000001, z: 0.010000001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
+--- !u!208 &208000013412129874
+NavMeshObstacle:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011756332262}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
