@@ -1160,7 +1160,8 @@ GameObject:
   - 95: {fileID: 95000013716404720}
   - 114: {fileID: 114000011773004410}
   - 54: {fileID: 54000011565942002}
-  - 136: {fileID: 136000010261010318}
+  - 136: {fileID: 136000010763280322}
+  - 114: {fileID: 114000013177497202}
   m_Layer: 0
   m_Name: Elf
   m_TagString: Player
@@ -1521,7 +1522,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000014248433758}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.01, y: 0, z: 1.39}
+  m_LocalPosition: {x: -61.98, y: 0.749, z: -8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -2352,6 +2353,18 @@ MonoBehaviour:
   fireWaitTime: 60
   strafeThreshold: 0.2
   playerNumber: 1
+--- !u!114 &114000013177497202
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014248433758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 443ebe2002f58b54cbac49998c742b65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Spawner: {fileID: 0}
 --- !u!114 &114000013464078958
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2387,7 +2400,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136000010261010318
+--- !u!136 &136000010763280322
 CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
