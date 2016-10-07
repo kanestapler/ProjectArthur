@@ -64,11 +64,15 @@ public class PlayerController : MonoBehaviour {
     }
 
     private bool InRangeOfCrown() {
-        return true;
+        if (playerNumber == 1) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     private void GiveMeTheCrown() {
-        //crown.transform.parent = this.transform;
+        crown.transform.parent = this.transform;
     }
 
     private void GrabCrown() {
