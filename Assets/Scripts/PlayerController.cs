@@ -36,6 +36,8 @@ public class PlayerController : MonoBehaviour {
 
     private GameObject crown;
 
+	public AudioSource FootSteps;
+
     void Start () {
         GC = GameObject.Find("GameController").GetComponent<GlobalController>();
         crown = GameObject.FindGameObjectWithTag("Crown");
@@ -52,6 +54,7 @@ public class PlayerController : MonoBehaviour {
         
         if (GC.gameReady) {
             Move();
+
             Turn();
             if (InRangeOfCrown()) {
                 GiveMeTheCrown();
