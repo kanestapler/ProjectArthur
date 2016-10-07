@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37356418, g: 0.38112003, b: 0.35887662, a: 1}
+  m_IndirectSpecularColor: {r: 0.37356433, g: 0.38112015, b: 0.35887673, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -631,7 +631,7 @@ Prefab:
     - target: {fileID: 96000010547496862, guid: 6b92aa267ed10bd41bc1a6c74b9a10be,
         type: 2}
       propertyPath: m_Time
-      value: 2.5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 96000010547496862, guid: 6b92aa267ed10bd41bc1a6c74b9a10be,
         type: 2}
@@ -642,6 +642,61 @@ Prefab:
         type: 2}
       propertyPath: m_EndWidth
       value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 96000010547496862, guid: 6b92aa267ed10bd41bc1a6c74b9a10be,
+        type: 2}
+      propertyPath: m_Colors.m_Color[0].rgba
+      value: 4278255611
+      objectReference: {fileID: 0}
+    - target: {fileID: 96000010547496862, guid: 6b92aa267ed10bd41bc1a6c74b9a10be,
+        type: 2}
+      propertyPath: m_Colors.m_Color[2].rgba
+      value: 4294965334
+      objectReference: {fileID: 0}
+    - target: {fileID: 96000010547496862, guid: 6b92aa267ed10bd41bc1a6c74b9a10be,
+        type: 2}
+      propertyPath: m_Colors.m_Color[1].rgba
+      value: 4218093355
+      objectReference: {fileID: 0}
+    - target: {fileID: 96000010547496862, guid: 6b92aa267ed10bd41bc1a6c74b9a10be,
+        type: 2}
+      propertyPath: m_Colors.m_Color[4].rgba
+      value: 5177599
+      objectReference: {fileID: 0}
+    - target: {fileID: 96000010547496862, guid: 6b92aa267ed10bd41bc1a6c74b9a10be,
+        type: 2}
+      propertyPath: m_Colors.m_Color[3].rgba
+      value: 4294921255
+      objectReference: {fileID: 0}
+    - target: {fileID: 96000010547496862, guid: 6b92aa267ed10bd41bc1a6c74b9a10be,
+        type: 2}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 96000010547496862, guid: 6b92aa267ed10bd41bc1a6c74b9a10be,
+        type: 2}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108000010687395820, guid: 6b92aa267ed10bd41bc1a6c74b9a10be,
+        type: 2}
+      propertyPath: m_Intensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108000010687395820, guid: 6b92aa267ed10bd41bc1a6c74b9a10be,
+        type: 2}
+      propertyPath: m_DrawHalo
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 96000010547496862, guid: 6b92aa267ed10bd41bc1a6c74b9a10be,
+        type: 2}
+      propertyPath: m_Autodestruct
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 96000010547496862, guid: 6b92aa267ed10bd41bc1a6c74b9a10be,
+        type: 2}
+      propertyPath: m_MotionVectors
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6b92aa267ed10bd41bc1a6c74b9a10be, type: 2}
