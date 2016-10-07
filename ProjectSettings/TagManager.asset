@@ -8,6 +8,8 @@ TagManager:
   - Throne
   - Wall
   - Crown
+  - Dagger1
+  - Dagger2
   layers:
   - Default
   - TransparentFX

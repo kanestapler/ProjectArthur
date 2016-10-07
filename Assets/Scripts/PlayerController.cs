@@ -129,6 +129,7 @@ public class PlayerController : MonoBehaviour {
         if (ReadyToFire()) {
             fireTime = 1;
             ani.SetTrigger(ATTACK);
+
         }
     }
 
