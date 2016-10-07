@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour {
     public int fireWaitTime;
     public float strafeThreshold;
 
+    public bool hasCrown;
+
     public int playerNumber;
 
     private Animator ani;
@@ -72,7 +74,13 @@ public class PlayerController : MonoBehaviour {
     }
 
     private void GiveMeTheCrown() {
-        crown.transform.parent = this.transform;
+        /*
+         * if (otherPlayerDoesntHaveCrown()) {
+         *  crown.transform.parent = this.transform;
+            hasCrown = true;
+            GC.whoHasTheCrown = gameObject;
+         * }
+         */
     }
 
     private void GrabCrown() {

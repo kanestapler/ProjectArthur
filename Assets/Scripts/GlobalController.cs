@@ -4,6 +4,7 @@ using System.Collections;
 public class GlobalController : MonoBehaviour {
 
     public bool gameReady;
+    public GameObject whoHasTheCrown;
 
 	// Use this for initialization
 	void Start () {
