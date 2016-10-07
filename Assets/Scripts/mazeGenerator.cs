@@ -52,6 +52,7 @@ public class mazeGenerator : MonoBehaviour
 
     void CreateWalls()
     {
+        bool stopFlickering = false;
         wallHolder = new GameObject();
         wallHolder.name = "Maze";
 
@@ -64,6 +65,14 @@ public class mazeGenerator : MonoBehaviour
         {
             for (int j = 0; j <= xSize; j++)
             {
+                if (stopFlickering)
+                {
+                    wall.transform.localScale = new Vector3(0.488f, 3, 3);
+                }
+                else
+                {
+                    wall.transform.localScale = new Vector3(0.5f, 3, 3);
+                }
                 myPos = new Vector3(initialPos.x + (j * wallLength) - wallLength / 2, startingPos, initialPos.z + (i * wallLength) - wallLength / 2);
                 tempWall = Instantiate(wall, myPos, Quaternion.identity) as GameObject;
                 tempWall.transform.parent = wallHolder.transform;
@@ -79,6 +88,7 @@ public class mazeGenerator : MonoBehaviour
                     newTorcheModel.transform.Rotate(0.0f, 0.0f, -randomRotationForTorche);
                 }
             }
+            stopFlickering = !stopFlickering;
         }
 
         //y-axis
@@ -86,6 +96,14 @@ public class mazeGenerator : MonoBehaviour
         {
             for (int j = 0; j < xSize; j++)
             {
+                if (stopFlickering)
+                {
+                    wall.transform.localScale = new Vector3(0.488f, 3, 3);
+                }
+                else
+                {
+                    wall.transform.localScale = new Vector3(0.5f, 3, 3);
+                }
                 myPos = new Vector3(initialPos.x + (j * wallLength), startingPos, initialPos.z + (i * wallLength) - wallLength);
                 tempWall = Instantiate(wall, myPos, Quaternion.Euler(0.0f, 90.0f, 0.0f)) as GameObject;
                 tempWall.transform.parent = wallHolder.transform;
@@ -100,6 +118,8 @@ public class mazeGenerator : MonoBehaviour
                     newTorcheLight.transform.Translate(randomDistanceOutFromWall, 0.0f, 0.0f);
                     newTorcheModel.transform.Rotate(0.0f, 0.0f, -randomRotationForTorche);
                 }
+
+                stopFlickering = !stopFlickering;
             }
         }
 
