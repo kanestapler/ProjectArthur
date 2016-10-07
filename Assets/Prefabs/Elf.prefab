@@ -1043,6 +1043,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1000013836152920
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000010140622662}
+  m_Layer: 0
+  m_Name: CrownPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1000013877491538
 GameObject:
   m_ObjectHideFlags: 1
@@ -1224,6 +1239,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000011464649306}
   m_RootOrder: 4
+--- !u!4 &4000010140622662
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013836152920}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.004, y: -0.021, z: -0.024}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 4000013046245984}
+  m_RootOrder: 0
 --- !u!4 &4000010161259734
 Transform:
   m_ObjectHideFlags: 1
@@ -1522,7 +1550,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000014248433758}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.45, y: 0, z: -8}
+  m_LocalPosition: {x: -6.45, y: 0, z: -8.003833}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -1912,7 +1940,8 @@ Transform:
   m_LocalPosition: {x: -0.00003841358, y: 0.17712477, z: 0.025568835}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
+  m_Children:
+  - {fileID: 4000010140622662}
   m_Father: {fileID: 4000012653911554}
   m_RootOrder: 0
 --- !u!4 &4000013049493048
@@ -2352,6 +2381,9 @@ MonoBehaviour:
   axisThreshold: 0.3
   fireWaitTime: 60
   strafeThreshold: 0.2
+  crownPickupDistance: 1.47
+  crownPosition: {fileID: 4000010140622662}
+  hasCrown: 0
   playerNumber: 1
 --- !u!114 &114000013177497202
 MonoBehaviour:

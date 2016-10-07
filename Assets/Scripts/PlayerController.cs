@@ -17,8 +17,11 @@ public class PlayerController : MonoBehaviour {
     public float axisThreshold;
     public int fireWaitTime;
     public float strafeThreshold;
+    public float crownPickupDistance;
 
-    public bool hasCrown;
+    public Transform crownPosition;
+
+    private bool hasCrown;
 
     public int playerNumber;
 
@@ -60,38 +63,20 @@ public class PlayerController : MonoBehaviour {
                 fireTime++;
             }
             if (Input.GetButtonDown("Jump" + playerNumber)) {
-                //GrabCrown();
             }
         }
     }
 
     private bool InRangeOfCrown() {
-        if (playerNumber == 1) {
-            return true;
-        } else {
-            return false;
-        }
+        float currentDistance = Vector3.Distance(transform.position, crown.transform.position);
+        return (currentDistance < crownPickupDistance);
     }
 
     private void GiveMeTheCrown() {
-        /*
-         * if (otherPlayerDoesntHaveCrown()) {
-         *  crown.transform.parent = this.transform;
+        if (!GC.IsCrownPossessed()) {
             hasCrown = true;
-            GC.whoHasTheCrown = gameObject;
-         * }
-         */
-    }
-
-    private void GrabCrown() {
-        /*TODO
-         * Add in small jump animation
-         * This will play when player isn't next to the crown
-         * This will prevent the long animation from being played on accident and the player feeling like they are stuck
-         * Also would help the player know if they are in the correct position to get the crown
-         */
-        ani.SetBool(JOGGING, false);
-        ani.SetTrigger(JUMPING);
+            GC.GiveMeTheCrown(gameObject, crownPosition);
+         }
     }
 
     private void Move() {
