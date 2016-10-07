@@ -67,11 +67,11 @@ public class mazeGenerator : MonoBehaviour
             {
                 if (stopFlickering)
                 {
-                    wall.transform.localScale = new Vector3(0.488f, 3, 3);
+                    wall.transform.localScale = new Vector3(0.488f, 4, 3);
                 }
                 else
                 {
-                    wall.transform.localScale = new Vector3(0.5f, 3, 3);
+                    wall.transform.localScale = new Vector3(0.5f, 4, 3);
                 }
                 myPos = new Vector3(initialPos.x + (j * wallLength) - wallLength / 2, startingPos, initialPos.z + (i * wallLength) - wallLength / 2);
                 tempWall = Instantiate(wall, myPos, Quaternion.identity) as GameObject;
@@ -98,11 +98,11 @@ public class mazeGenerator : MonoBehaviour
             {
                 if (stopFlickering)
                 {
-                    wall.transform.localScale = new Vector3(0.488f, 3, 3);
+                    wall.transform.localScale = new Vector3(0.488f, 4, 3);
                 }
                 else
                 {
-                    wall.transform.localScale = new Vector3(0.5f, 3, 3);
+                    wall.transform.localScale = new Vector3(0.5f, 4, 3);
                 }
                 myPos = new Vector3(initialPos.x + (j * wallLength), startingPos, initialPos.z + (i * wallLength) - wallLength);
                 tempWall = Instantiate(wall, myPos, Quaternion.Euler(0.0f, 90.0f, 0.0f)) as GameObject;
