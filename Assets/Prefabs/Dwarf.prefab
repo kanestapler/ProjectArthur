@@ -1069,6 +1069,7 @@ GameObject:
   - 114: {fileID: 114000012377633856}
   - 54: {fileID: 54000011924034276}
   - 136: {fileID: 136000013283606574}
+  - 114: {fileID: 114000011843701678}
   m_Layer: 0
   m_Name: Dwarf
   m_TagString: Player
@@ -2379,6 +2380,18 @@ MonoBehaviour:
   height: 3
   forwardDistance: 0.55
   initialRotation: 2
+--- !u!114 &114000011843701678
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013797394736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 443ebe2002f58b54cbac49998c742b65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Spawner: {fileID: 0}
 --- !u!114 &114000012377633856
 MonoBehaviour:
   m_ObjectHideFlags: 1
