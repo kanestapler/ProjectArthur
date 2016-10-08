@@ -33,14 +33,16 @@ public class PlayerController : MonoBehaviour {
     private int fireTime;
 
     private GlobalController GC;
-
     private GameObject crown;
+    private GameObject exit;
 
 	public AudioSource FootSteps;
 
     void Start () {
         GC = GameObject.Find("GameController").GetComponent<GlobalController>();
         crown = GameObject.FindGameObjectWithTag("Crown");
+        exit = GameObject.Find("WallDestroyerP" + playerNumber + "Exit");
+        print(exit);
         ani = GetComponent<Animator>();
         fireTime = 0;
     }
@@ -67,6 +69,12 @@ public class PlayerController : MonoBehaviour {
             }
             if (Input.GetButtonDown("Jump" + playerNumber)) {
             }
+        }
+    }
+
+    void OnTriggerEnter(Collider other) {
+        if (other.gameObject == exit) {
+            //You Win!!
         }
     }
 
