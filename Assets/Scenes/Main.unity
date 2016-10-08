@@ -667,7 +667,7 @@ GameObject:
   m_PrefabParentObject: {fileID: 1000010838289482, guid: 8040e3d596735ff48975ac31769b8338,
     type: 2}
   m_PrefabInternal: {fileID: 571438355}
---- !u!136 &505723640
+--- !u!136 &505723644
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -1436,9 +1436,9 @@ Camera:
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.45
+    x: 0.44
     y: 0.79
-    width: 0.1
+    width: 0.12
     height: 1.74
   near clip plane: 0.3
   far clip plane: 1000
@@ -2090,7 +2090,7 @@ GameObject:
   m_PrefabParentObject: {fileID: 1000012506111674, guid: 7d3c1e232aca6dd45abbe7d00ac82938,
     type: 2}
   m_PrefabInternal: {fileID: 193135524}
---- !u!136 &1969039340
+--- !u!136 &1969039344
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
