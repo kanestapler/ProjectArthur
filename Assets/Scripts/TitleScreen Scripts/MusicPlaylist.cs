@@ -5,9 +5,10 @@ public class MusicPlaylist : MonoBehaviour {
 
 	public AudioClip[] clips;
 	private AudioSource audioSource;
+    private GlobalController GC;
 
 	void Start () {
-
+        GC = GameObject.Find("GameController").GetComponent<GlobalController>();
         audioSource = GetComponent<AudioSource>();
 		audioSource.loop = false;
 
@@ -20,7 +21,9 @@ public class MusicPlaylist : MonoBehaviour {
 	//Update is called once per frame
 	void Update() {
 
-		if (!audioSource.isPlaying) {
+        if (GC.gameOver) {
+            audioSource.Stop();
+        } else if (!audioSource.isPlaying) {
 			audioSource.clip = GetRandomClip ();
 			audioSource.Play ();
 		}

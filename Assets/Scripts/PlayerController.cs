@@ -82,7 +82,7 @@ public class PlayerController : MonoBehaviour {
 
     void OnTriggerEnter(Collider other) {
         if (other.gameObject == exit && hasCrown) {
-            //You Win!!
+            GC.GameOver(playerNumber);
         }
     }
 

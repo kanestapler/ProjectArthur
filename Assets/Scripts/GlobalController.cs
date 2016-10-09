@@ -5,6 +5,8 @@ public class GlobalController : MonoBehaviour {
 
     [HideInInspector]
     public bool gameReady;
+    [HideInInspector]
+    public bool gameOver;
     public Transform crownSpawn;
     public AudioClip CrownDrop;
     public AudioClip WinningSong;
@@ -16,6 +18,7 @@ public class GlobalController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        gameOver = false;
         gameReady = false;
         whoHasTheCrown = null;
         crown = GameObject.Find("Crown");
@@ -52,8 +55,11 @@ public class GlobalController : MonoBehaviour {
     }
 
     public void GameOver(int WinningPlayerNumber) {
-        audioSource.Stop();
-        audioSource.clip = WinningSong;
-        audioSource.Play();
+        gameOver = true;
+        if (audioSource.clip != WinningSong) {
+            audioSource.Stop();
+            audioSource.clip = WinningSong;
+            audioSource.Play();
+        }
     }
 }
