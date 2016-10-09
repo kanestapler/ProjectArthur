@@ -61,7 +61,7 @@ public class PlayerController : MonoBehaviour {
             if (InRangeOfCrown()) {
                 GiveMeTheCrown();
             }
-            if (Input.GetButtonDown("Fire" + playerNumber)) {
+            if (Input.GetButtonDown("Fire" + playerNumber) && !hasCrown) {
                 Fire();
             }
             if (!ReadyToFire()) {
