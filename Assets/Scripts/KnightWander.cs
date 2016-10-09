@@ -28,10 +28,12 @@ public class KnightWander : MonoBehaviour {
     }
 
     void Update() {
+        NMAgent.speed = 1.0f;
         GameObject closestPlayer = ShouldIFollowPlayer();
         if (closestPlayer != null) {
             currentDestination = 3;
             NMAgent.SetDestination(closestPlayer.transform.position);
+            NMAgent.speed = 2.0f;
         } else if (ShouldITurnAround()) {
             if (currentDestination == 1) {
                 NMAgent.destination = destination2;

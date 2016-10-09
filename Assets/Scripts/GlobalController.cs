@@ -62,7 +62,16 @@ public class GlobalController : MonoBehaviour {
             GameObject npc = Instantiate(knight, point.position, point.rotation) as GameObject;
             KnightWander kw = npc.GetComponent<KnightWander>();
             kw.destination1 = point.position;
-            kw.destination2 = point.position + new Vector3(0.0f, 0.0f, 15.0f);
+
+            float distance = 38.0f; //distance along the z to other player's spawn
+
+            if(point == KnightSpawnPoints[0])
+            {
+                kw.destination2 = point.position + new Vector3(0.0f, 0.0f, -distance);
+            } else if(point == KnightSpawnPoints[1])
+            {
+                kw.destination2 = point.position + new Vector3(0.0f, 0.0f, distance);
+            }
         }
     }
 
