@@ -43,7 +43,6 @@ public class PlayerController : MonoBehaviour {
         GC = GameObject.Find("GameController").GetComponent<GlobalController>();
         crown = GameObject.FindGameObjectWithTag("Crown");
         exit = GameObject.Find("WallDestroyerP" + playerNumber + "Exit");
-        print(exit);
         ani = GetComponent<Animator>();
         fireTime = 0;
     }
