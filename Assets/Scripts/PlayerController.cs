@@ -21,7 +21,8 @@ public class PlayerController : MonoBehaviour {
 
     public Transform crownPosition;
 
-    private bool hasCrown;
+    [HideInInspector]
+    public bool hasCrown;
 
     public int playerNumber;
 
