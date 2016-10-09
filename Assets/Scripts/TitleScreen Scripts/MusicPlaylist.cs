@@ -8,7 +8,7 @@ public class MusicPlaylist : MonoBehaviour {
 
 	void Start () {
 
-		audioSource = FindObjectOfType<AudioSource> ();
+        audioSource = GetComponent<AudioSource>();
 		audioSource.loop = false;
 
 	}

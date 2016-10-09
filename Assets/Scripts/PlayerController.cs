@@ -19,8 +19,11 @@ public class PlayerController : MonoBehaviour {
     public float strafeThreshold;
     public float crownPickupDistance;
 
-    public AudioClip Footsteps;
-    public AudioClip KnifeSlash;
+    public AudioClip footsteps;
+    public AudioClip knifeSlash;
+
+    private AudioSource footstepsAS;
+    private AudioSource knifeSlashAS;
 
     public Transform crownPosition;
 
@@ -47,6 +50,8 @@ public class PlayerController : MonoBehaviour {
         crown = GameObject.FindGameObjectWithTag("Crown");
         exit = GameObject.Find("WallDestroyerP" + playerNumber + "Exit");
         ani = GetComponent<Animator>();
+        footstepsAS = AddAudio(footsteps, true, false, 0.7f);
+        knifeSlashAS = AddAudio(knifeSlash, false, false, 0.9f);
         fireTime = 0;
     }
 	
@@ -105,29 +110,40 @@ public class PlayerController : MonoBehaviour {
             ani.SetBool(STRAFINGRIGHT, false);
             ani.SetBool(STRAFINGLEFT, false);
             speed = forwardSpeed;
+            PlayFootsteps();
         } else if (vMove < -strafeThreshold) { //Moving backwards
             ani.SetBool(BACKWARDS, true);
             ani.SetBool(JOGGING, false);
             ani.SetBool(STRAFINGRIGHT, false);
             ani.SetBool(STRAFINGLEFT, false);
             speed = backwardsSpeed;
+            PlayFootsteps();
         } else if (hMove > 0) {
             ani.SetBool(JOGGING, false);
             ani.SetBool(STRAFINGRIGHT, true);
             ani.SetBool(STRAFINGLEFT, false);
             ani.SetBool(BACKWARDS, false);
+            PlayFootsteps();
         } else if (hMove < 0) {
             ani.SetBool(JOGGING, false);
             ani.SetBool(STRAFINGLEFT, true);
             ani.SetBool(STRAFINGRIGHT, false);
             ani.SetBool(BACKWARDS, false);
+            PlayFootsteps();
         } else {
+            footstepsAS.Stop();
             ani.SetBool(JOGGING, false);
             ani.SetBool(STRAFINGLEFT, false);
             ani.SetBool(STRAFINGRIGHT, false);
             ani.SetBool(BACKWARDS, false);
         }
         transform.Translate(hMove * strafeSpeed * Time.deltaTime, 0.0f, vMove * speed * Time.deltaTime);
+    }
+
+    private void PlayFootsteps() {
+        if (!footstepsAS.isPlaying) {
+            footstepsAS.Play();
+        }
     }
 
     private void Turn() {
@@ -140,7 +156,7 @@ public class PlayerController : MonoBehaviour {
         if (ReadyToFire()) {
             fireTime = 1;
             ani.SetTrigger(ATTACK);
-
+            knifeSlashAS.PlayDelayed(0.4f);
         }
     }
 
@@ -149,5 +165,14 @@ public class PlayerController : MonoBehaviour {
 
     private bool ReadyToFire() {
         return fireTime % fireWaitTime == 0;
+    }
+
+    private AudioSource AddAudio(AudioClip clip, bool loop, bool playAwake, float vol) {
+        AudioSource newAudio = gameObject.AddComponent<AudioSource>();
+        newAudio.clip = clip; 
+        newAudio.loop = loop;
+        newAudio.playOnAwake = playAwake;
+        newAudio.volume = vol; 
+        return newAudio;
     }
 }

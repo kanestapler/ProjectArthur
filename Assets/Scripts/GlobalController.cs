@@ -10,6 +10,7 @@ public class GlobalController : MonoBehaviour {
     public AudioClip WinningSong;
 
     private GameObject whoHasTheCrown;
+    private AudioSource audioSource;
 
     private GameObject crown;
 
@@ -18,6 +19,7 @@ public class GlobalController : MonoBehaviour {
         gameReady = false;
         whoHasTheCrown = null;
         crown = GameObject.Find("Crown");
+        audioSource = GetComponent<AudioSource>();
 	}
 
     public bool IsCrownPossessed() {
@@ -36,6 +38,9 @@ public class GlobalController : MonoBehaviour {
     }
 
     public void ResetTheCrown() {
+        audioSource.Stop();
+        audioSource.clip = CrownDrop;
+        audioSource.Play();
         whoHasTheCrown = null;
         crown.transform.parent = null;
         crown.transform.position = crownSpawn.position;
@@ -44,5 +49,11 @@ public class GlobalController : MonoBehaviour {
 
     public GameObject WhoHasTheCrown() {
         return whoHasTheCrown;
+    }
+
+    public void GameOver(int WinningPlayerNumber) {
+        audioSource.Stop();
+        audioSource.clip = WinningSong;
+        audioSource.Play();
     }
 }

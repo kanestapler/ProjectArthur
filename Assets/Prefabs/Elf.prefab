@@ -2564,8 +2564,8 @@ MonoBehaviour:
   fireWaitTime: 60
   strafeThreshold: 0.2
   crownPickupDistance: 1.47
-  Footsteps: {fileID: 8300000, guid: 21326c52170dc704c96a570ebf03e32f, type: 3}
-  KnifeSlash: {fileID: 8300000, guid: fcac2ae97ff3ccc4bb4a0c829469be1f, type: 3}
+  footsteps: {fileID: 8300000, guid: 21326c52170dc704c96a570ebf03e32f, type: 3}
+  knifeSlash: {fileID: 8300000, guid: fcac2ae97ff3ccc4bb4a0c829469be1f, type: 3}
   crownPosition: {fileID: 4000010140622662}
   hasCrown: 0
   playerNumber: 2
