@@ -16,24 +16,25 @@ Platform assembly: C:\Users\A_Ann\ProjectArthur\test_Data\Managed\UnityEngine.Ne
 Loading C:\Users\A_Ann\ProjectArthur\test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Users\A_Ann\ProjectArthur\test_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
 Loading C:\Users\A_Ann\ProjectArthur\test_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.093 seconds
+- Completed reload, in  0.154 seconds
 Platform assembly: C:\Users\A_Ann\ProjectArthur\test_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\A_Ann\ProjectArthur\test_Data\Managed\System.dll (this message is harmless)
 desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.009662 ms
+UnloadTime: 1.053182 ms
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 12b4 -> priority: 1 
-Scene '' (-1) couldn't be loaded because it has not been added to the build settings or the AssetBundle has not been loaded.
-To add a scene to the build settings use the menu File->Build Settings...
- 
-(Filename:  Line: 532)
-
+  Thread -> id: 2098 -> priority: 1 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 7.327220 ms
+UnloadTime: 11.569646 ms
 
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1445.
-Total: 0.532991 ms (FindLiveObjects: 0.083455 ms CreateObjectMapping: 0.048639 ms MarkObjects: 0.381951 ms  DeleteObjects: 0.018431 ms)
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 201.
+Total: 1.994748 ms (FindLiveObjects: 0.018431 ms CreateObjectMapping: 0.015359 ms MarkObjects: 0.198143 ms  DeleteObjects: 1.761789 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.816126 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 226.
+Total: 0.267263 ms (FindLiveObjects: 0.016895 ms CreateObjectMapping: 0.013311 ms MarkObjects: 0.231935 ms  DeleteObjects: 0.004607 ms)
 
