@@ -750,9 +750,10 @@ GameObject:
   - 23: {fileID: 23000012256292216}
   - 95: {fileID: 95000013955669224}
   - 136: {fileID: 136000011055457428}
+  - 114: {fileID: 114000012139981164}
   m_Layer: 0
   m_Name: Dagger
-  m_TagString: Dagger1
+  m_TagString: Dagger2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2570,6 +2571,17 @@ MonoBehaviour:
   hasCrown: 0
   playerNumber: 2
   FootSteps: {fileID: 0}
+--- !u!114 &114000012139981164
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012506111674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7ed9758b73b309419147de080e02b3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000013177497202
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2637,10 +2649,10 @@ CapsuleCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012506111674}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.4898325
-  m_Height: 4.2897496
+  m_Radius: 1
+  m_Height: 10
   m_Direction: 1
   m_Center: {x: 0.013400688, y: 0.06827902, z: -0.062206503}
 --- !u!137 &137000010398072336
