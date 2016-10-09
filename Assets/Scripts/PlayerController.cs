@@ -19,6 +19,9 @@ public class PlayerController : MonoBehaviour {
     public float strafeThreshold;
     public float crownPickupDistance;
 
+    public AudioClip Footsteps;
+    public AudioClip KnifeSlash;
+
     public Transform crownPosition;
 
     [HideInInspector]

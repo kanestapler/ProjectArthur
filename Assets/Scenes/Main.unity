@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37356392, g: 0.38112, b: 0.3588766, a: 1}
+  m_IndirectSpecularColor: {r: 0.37356418, g: 0.38112003, b: 0.35887662, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -2063,6 +2063,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameReady: 0
   crownSpawn: {fileID: 456372831}
+  CrownDrop: {fileID: 8300000, guid: 373df976c095814458c123b48310f889, type: 3}
+  WinningSong: {fileID: 8300000, guid: 23bd936aeac49dd49835192b03f61a32, type: 3}
 --- !u!1 &1842207435
 GameObject:
   m_ObjectHideFlags: 0

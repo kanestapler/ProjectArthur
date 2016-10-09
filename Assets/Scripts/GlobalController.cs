@@ -6,6 +6,8 @@ public class GlobalController : MonoBehaviour {
     [HideInInspector]
     public bool gameReady;
     public Transform crownSpawn;
+    public AudioClip CrownDrop;
+    public AudioClip WinningSong;
 
     private GameObject whoHasTheCrown;
 
