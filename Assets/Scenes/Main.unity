@@ -236,7 +236,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011464649306, guid: 7d3c1e232aca6dd45abbe7d00ac82938, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.37007102
       objectReference: {fileID: 0}
     - target: {fileID: 4000011464649306, guid: 7d3c1e232aca6dd45abbe7d00ac82938, type: 2}
       propertyPath: m_LocalRotation.z
@@ -244,7 +244,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011464649306, guid: 7d3c1e232aca6dd45abbe7d00ac82938, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.9290035
       objectReference: {fileID: 0}
     - target: {fileID: 4000011464649306, guid: 7d3c1e232aca6dd45abbe7d00ac82938, type: 2}
       propertyPath: m_RootOrder
@@ -969,7 +969,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000013085718878, guid: 8040e3d596735ff48975ac31769b8338, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -6.59
+      value: 33.25
       objectReference: {fileID: 0}
     - target: {fileID: 4000013085718878, guid: 8040e3d596735ff48975ac31769b8338, type: 2}
       propertyPath: m_LocalPosition.y
@@ -977,7 +977,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013085718878, guid: 8040e3d596735ff48975ac31769b8338, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -5.01
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 4000013085718878, guid: 8040e3d596735ff48975ac31769b8338, type: 2}
       propertyPath: m_LocalRotation.x
@@ -985,15 +985,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013085718878, guid: 8040e3d596735ff48975ac31769b8338, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0.91219175
       objectReference: {fileID: 0}
     - target: {fileID: 4000013085718878, guid: 8040e3d596735ff48975ac31769b8338, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4000013085718878, guid: 8040e3d596735ff48975ac31769b8338, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: -0.40976375
       objectReference: {fileID: 0}
     - target: {fileID: 4000013085718878, guid: 8040e3d596735ff48975ac31769b8338, type: 2}
       propertyPath: m_RootOrder
@@ -1194,6 +1194,34 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &595924404
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 595924405}
+  m_Layer: 0
+  m_Name: KnightSpawn1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &595924405
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 595924404}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.33, y: 0, z: 11.88}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1600334175}
+  m_RootOrder: 0
 --- !u!1 &721533213
 GameObject:
   m_ObjectHideFlags: 0
@@ -1273,6 +1301,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!1 &933573439
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 933573440}
+  m_Layer: 0
+  m_Name: KnightSpawn2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &933573440
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 933573439}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 33.81, y: 0, z: 7.03}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1600334175}
+  m_RootOrder: 1
 --- !u!1 &965916206
 GameObject:
   m_ObjectHideFlags: 0
@@ -1738,6 +1794,36 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &1600334174
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1600334175}
+  m_Layer: 0
+  m_Name: KnightSpawnPoints
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1600334175
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1600334174}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 595924405}
+  - {fileID: 933573440}
+  m_Father: {fileID: 0}
+  m_RootOrder: 21
 --- !u!1001 &1667878512
 Prefab:
   m_ObjectHideFlags: 0
@@ -1776,6 +1862,10 @@ Prefab:
     - target: {fileID: 4000012381997114, guid: c8a817ec1755f1b41a983a318b5420be, type: 2}
       propertyPath: m_RootOrder
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013944072100, guid: c8a817ec1755f1b41a983a318b5420be, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c8a817ec1755f1b41a983a318b5420be, type: 2}
@@ -2089,6 +2179,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013944072100, guid: c8a817ec1755f1b41a983a318b5420be, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c8a817ec1755f1b41a983a318b5420be, type: 2}
   m_IsPrefabParent: 0
@@ -2146,6 +2240,10 @@ MonoBehaviour:
   crownSpawn: {fileID: 456372831}
   CrownDrop: {fileID: 8300000, guid: 373df976c095814458c123b48310f889, type: 3}
   WinningSong: {fileID: 8300000, guid: 23bd936aeac49dd49835192b03f61a32, type: 3}
+  knight: {fileID: 1000013944072100, guid: c8a817ec1755f1b41a983a318b5420be, type: 2}
+  KnightSpawnPoints:
+  - {fileID: 595924405}
+  - {fileID: 933573440}
 --- !u!82 &1822697334
 AudioSource:
   m_ObjectHideFlags: 0

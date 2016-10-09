@@ -20,6 +20,9 @@ public class rise : MonoBehaviour
         if (transform.position.y >= max)
         {
             speed = 0.0f;
+            if (!GC.gameReady) {
+                GC.SpawnKnights();
+            }
             GC.gameReady = true;
         }
 

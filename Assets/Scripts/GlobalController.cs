@@ -10,6 +10,9 @@ public class GlobalController : MonoBehaviour {
     public Transform crownSpawn;
     public AudioClip CrownDrop;
     public AudioClip WinningSong;
+    public GameObject knight;
+
+    public Transform[] KnightSpawnPoints;
 
     private GameObject whoHasTheCrown;
     private AudioSource audioSource;
@@ -52,6 +55,15 @@ public class GlobalController : MonoBehaviour {
 
     public GameObject WhoHasTheCrown() {
         return whoHasTheCrown;
+    }
+
+    public void SpawnKnights() {
+        foreach (Transform point in KnightSpawnPoints) {
+            GameObject npc = Instantiate(knight, point.position, point.rotation) as GameObject;
+            KnightWander kw = npc.GetComponent<KnightWander>();
+            kw.destination1 = point.position;
+            kw.destination2 = point.position + new Vector3(0.0f, 0.0f, 15.0f);
+        }
     }
 
     public void GameOver(int WinningPlayerNumber) {
