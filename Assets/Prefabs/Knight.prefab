@@ -2386,10 +2386,10 @@ MonoBehaviour:
   destination1: {x: 0, y: 0, z: 0}
   destination2: {x: 0, y: 0, z: 0}
   distanceThreshholdToTurnAround: 3
-  distanceToStartFollowingPlayer: 7
-  attackDistanceThreshhold: 1
+  distanceToStartFollowingPlayer: 9
+  attackDistanceThreshhold: 2.5
   walkSpeed: 1
-  runSpeed: 2
+  runSpeed: 2.2
 --- !u!137 &137000010366149222
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
