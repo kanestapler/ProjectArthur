@@ -1616,7 +1616,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000014248433758}
   m_LocalRotation: {x: 0, y: 0.37007102, z: 0, w: 0.9290035}
-  m_LocalPosition: {x: -6.45, y: 0, z: -8.003833}
+  m_LocalPosition: {x: -6.5, y: 0, z: -8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 43.44, z: 0}
   m_Children:
@@ -2565,6 +2565,7 @@ MonoBehaviour:
   fireWaitTime: 60
   strafeThreshold: 0.2
   crownPickupDistance: 1.47
+  crownSpeedReducer: 0.5
   footsteps: {fileID: 8300000, guid: 21326c52170dc704c96a570ebf03e32f, type: 3}
   knifeSlash: {fileID: 8300000, guid: fcac2ae97ff3ccc4bb4a0c829469be1f, type: 3}
   crownPosition: {fileID: 4000010140622662}

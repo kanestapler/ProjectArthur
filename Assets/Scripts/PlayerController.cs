@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour {
     public float strafeThreshold;
     public float crownPickupDistance;
 
+    public float crownSpeedReducer = 0.5f;
+
     public AudioClip footsteps;
     public AudioClip knifeSlash;
 
@@ -42,6 +44,7 @@ public class PlayerController : MonoBehaviour {
     private GlobalController GC;
     private GameObject crown;
     private GameObject exit;
+    private GameObject dagger;
 
 	public AudioSource FootSteps;
 
@@ -50,6 +53,7 @@ public class PlayerController : MonoBehaviour {
         crown = GameObject.FindGameObjectWithTag("Crown");
         exit = GameObject.Find("WallDestroyerP" + playerNumber + "Exit");
         ani = GetComponent<Animator>();
+        dagger = GameObject.FindGameObjectWithTag("Dagger"+playerNumber);
         footstepsAS = AddAudio(footsteps, true, false, 0.7f);
         knifeSlashAS = AddAudio(knifeSlash, false, false, 0.9f);
         fireTime = 0;
@@ -76,6 +80,11 @@ public class PlayerController : MonoBehaviour {
                 fireTime++;
             }
             if (Input.GetButtonDown("Jump" + playerNumber)) {
+            }
+            if (hasCrown) {
+                dagger.SetActive(false);
+            } else {
+                dagger.SetActive(true);
             }
         }
     }
@@ -137,6 +146,9 @@ public class PlayerController : MonoBehaviour {
             ani.SetBool(STRAFINGRIGHT, false);
             ani.SetBool(BACKWARDS, false);
         }
+        if (hasCrown) {
+            speed = speed * crownSpeedReducer;
+        }
         transform.Translate(hMove * strafeSpeed * Time.deltaTime, 0.0f, vMove * speed * Time.deltaTime);
     }
 
@@ -159,9 +171,6 @@ public class PlayerController : MonoBehaviour {
             knifeSlashAS.PlayDelayed(0.4f);
         }
     }
-
-
-
 
     private bool ReadyToFire() {
         return fireTime % fireWaitTime == 0;
