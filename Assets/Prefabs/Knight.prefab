@@ -2228,7 +2228,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011703801840}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0.1100006, y: 12.38, z: 0.2063322}
+  m_LocalPosition: {x: 0.1100006, y: 25, z: 0.2063322}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_Children:
@@ -2382,12 +2382,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c6a08e0c679cef4db1b75bb251cc5af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
   distanceFromWall: 10
   destination1: {x: 0, y: 0, z: 0}
   destination2: {x: 0, y: 0, z: 0}
   distanceThreshholdToTurnAround: 3
   distanceToStartFollowingPlayer: 7
+  attackDistanceThreshhold: 1
+  walkSpeed: 1
+  runSpeed: 2
 --- !u!137 &137000010366149222
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
