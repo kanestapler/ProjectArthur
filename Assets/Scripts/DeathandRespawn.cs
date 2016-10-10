@@ -9,12 +9,10 @@ public class DeathandRespawn : MonoBehaviour {
 
     private PlayerController MyPC;
     private GlobalController GC;
-    private int playerNumber;
 
     void Start() {
         MyPC = GetComponent<PlayerController>();
         GC = GameObject.Find("GameController").GetComponent<GlobalController>();
-        playerNumber = MyPC.playerNumber;
     }
 
     void OnCollisionEnter(Collision other)

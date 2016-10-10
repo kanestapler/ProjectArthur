@@ -4,7 +4,7 @@ using System.Collections;
 public class PlayerController : MonoBehaviour {
 
     private readonly string JOGGING = "isJogging";
-    private readonly string JUMPING = "isJumping";
+    //private readonly string JUMPING = "isJumping";
     private readonly string ATTACK = "attack";
     private readonly string BACKWARDS = "isWalkingBackwards";
     private readonly string STRAFINGRIGHT = "isStrafingRight";
