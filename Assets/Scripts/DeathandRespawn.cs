@@ -4,6 +4,8 @@ using System.Collections;
 public class DeathandRespawn : MonoBehaviour {
 
     public GameObject Spawner;
+    public Transform secondarySpawner;
+    public float SpawnDistanceThreshhold = 4.0f;
 
     private PlayerController MyPC;
     private GlobalController GC;
@@ -28,7 +30,19 @@ public class DeathandRespawn : MonoBehaviour {
     }
 
     public void RespawnMe() {
-        this.transform.position = Spawner.transform.position;
+        GameObject[] knights = GameObject.FindGameObjectsWithTag("Knight");
+        bool isThereAKnightInMyHome = false;
+        foreach (GameObject knight in knights) {
+            if (Vector3.Distance(knight.transform.position, Spawner.transform.position) < SpawnDistanceThreshhold) {
+                isThereAKnightInMyHome = true;
+                this.transform.position = Spawner.transform.position;
+            }
+        }
+        if (isThereAKnightInMyHome) {
+            this.transform.position = secondarySpawner.transform.position;
+        } else {
+            this.transform.position = Spawner.transform.position;
+        }
     }
 
 }

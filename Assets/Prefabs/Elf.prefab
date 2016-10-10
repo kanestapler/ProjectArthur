@@ -2595,6 +2595,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Spawner: {fileID: 0}
+  secondarySpawner: {fileID: 0}
+  SpawnDistanceThreshhold: 4
 --- !u!114 &114000013464078958
 MonoBehaviour:
   m_ObjectHideFlags: 1
