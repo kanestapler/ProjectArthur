@@ -148,6 +148,7 @@ public class PlayerController : MonoBehaviour {
         }
         if (hasCrown) {
             speed = speed * crownSpeedReducer;
+            strafeSpeed = strafeSpeed * crownSpeedReducer;
         }
         transform.Translate(hMove * strafeSpeed * Time.deltaTime, 0.0f, vMove * speed * Time.deltaTime);
     }

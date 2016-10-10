@@ -2576,6 +2576,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Spawner: {fileID: 0}
   secondarySpawner: {fileID: 0}
+  SpawnDistanceThreshhold: 4
 --- !u!114 &114000012377633856
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2595,7 +2596,7 @@ MonoBehaviour:
   fireWaitTime: 60
   strafeThreshold: 0
   crownPickupDistance: 1.47
-  crownSpeedReducer: 0.5
+  crownSpeedReducer: 0.75
   footsteps: {fileID: 8300000, guid: 21326c52170dc704c96a570ebf03e32f, type: 3}
   knifeSlash: {fileID: 8300000, guid: fcac2ae97ff3ccc4bb4a0c829469be1f, type: 3}
   crownPosition: {fileID: 4000012973160386}
